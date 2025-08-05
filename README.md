@@ -78,7 +78,7 @@ Este projeto utiliza duas branches com propósitos distintos. Entender essa sepa
         
         # 2. Envia o conteúdo da pasta de 'dist' para a branch gh-pages
         # (Lembre-se de confirmar o nome da pasta de saída com 'ls dist/')
-        ngh --dir=dist/portfolio 
+        ngh --dir=dist/leomarotta.github.io 
         ```
 
     * **Para publicar a versão em Inglês:**
@@ -87,7 +87,7 @@ Este projeto utiliza duas branches com propósitos distintos. Entender essa sepa
         ng build --configuration=en
         
         # 2. Envia para uma subpasta no mesmo branch
-        ngh --dir=dist/portfolio/en --no-silent
+        ngh --dir=dist/leomarotta.github.io/en --no-silent
         ```
 
 ## 📜 Scripts Disponíveis
