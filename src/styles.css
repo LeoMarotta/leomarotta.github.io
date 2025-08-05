@@ -5,6 +5,7 @@ html, body {
   font-family: 'Roboto', sans-serif; /* Fonte padrão do Material Design */
   background-color: #ffffff;
   color: #333;
+  scroll-behavior: smooth;
 }
 
 /* O seletor 'app-root > *' aplica estes estilos a todos os componentes
