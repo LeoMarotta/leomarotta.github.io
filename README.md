@@ -1,59 +1,108 @@
-# leomarotta.github.io
+# Portfólio Pessoal - Leonardo Marotta
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.15.
+![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-222222?style=for-the-badge&logo=github&logoColor=white)
 
-## Development server
+Este é o repositório do meu portfólio pessoal, desenvolvido para apresentar minhas habilidades, projetos e experiência profissional de forma interativa e moderna. O site foi construído com Angular e hospedado gratuitamente no GitHub Pages.
 
-To start a local development server, run:
+**[➡️ Ver Site Online](https://leomarotta.github.io)**
 
-```bash
-ng serve
-```
+*(Dica: Após finalizar o layout, tire um print da tela principal e substitua o nome do arquivo abaixo para ter uma imagem de preview no seu README!)*
+`![Screenshot do Portfólio](./screenshot.png)`
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## ✨ Funcionalidades
 
-## Code scaffolding
+* **Design Responsivo:** Totalmente adaptável para visualização em desktops, tablets e celulares.
+* **Seções Profissionais:** Inclui seções detalhadas sobre mim, minhas habilidades técnicas, experiência profissional e projetos.
+* **Internacionalização (i18n):** Suporte para múltiplos idiomas (Português e Inglês) para alcançar uma audiência global.
+* **Componentes Reutilizáveis:** Construído com a arquitetura baseada em componentes do Angular para fácil manutenção.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## 🛠️ Tecnologias Utilizadas
 
-```bash
-ng generate component component-name
-```
+* **Angular:** Framework principal para a construção da interface.
+* **TypeScript:** Linguagem base para o desenvolvimento com Angular.
+* **Angular Material:** Biblioteca de componentes para um design limpo e moderno.
+* **angular-cli-ghpages:** Ferramenta para automatizar o deploy para o GitHub Pages.
+* **HTML5 & SCSS:** Estrutura e estilização do site.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 🚀 Começando
 
-```bash
-ng generate --help
-```
+Siga os passos abaixo para configurar o ambiente e rodar o projeto localmente.
 
-## Building
+### Pré-requisitos
 
-To build the project run:
+* [Node.js](https://nodejs.org/) (versão LTS recomendada)
+* [Angular CLI](https://angular.dev/tools/cli) instalado globalmente (`npm install -g @angular/cli`)
 
-```bash
-ng build
-```
+### Instalação
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+1.  Clone o repositório:
+    ```bash
+    git clone [https://github.com/LeoMarotta/leomarotta.github.io.git](https://github.com/LeoMarotta/leomarotta.github.io.git)
+    ```
+2.  Navegue até o diretório do projeto:
+    ```bash
+    cd leomarotta.github.io
+    ```
+3.  Instale as dependências:
+    ```bash
+    npm install
+    ```
 
-## Running unit tests
+## 🔄 Fluxo de Desenvolvimento e Publicação
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+Este projeto utiliza duas branches com propósitos distintos. Entender essa separação é crucial.
 
-```bash
-ng test
-```
+### Entendendo as Branches
 
-## Running end-to-end tests
+* **`main`**: A "receita do bolo". É a branch principal que contém todo o código-fonte que você edita (`.ts`, `.html`, `.scss`). **Todo o desenvolvimento acontece aqui.**
+* **`gh-pages`**: O "bolo pronto". É uma branch de publicação que contém apenas o código compilado e otimizado (da pasta `dist/`). **Você nunca deve editar ou fazer merge desta branch diretamente.**
 
-For end-to-end (e2e) testing, run:
+### Passo a Passo para Atualizar o Site
 
-```bash
-ng e2e
-```
+1.  **Desenvolva na `main`**: Certifique-se de estar na branch `main` (`git checkout main`) e faça todas as suas alterações de código.
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+2.  **Faça o Commit das Alterações**: Salve seu trabalho no histórico do Git.
+    ```bash
+    git add .
+    git commit -m "feat: adiciona nova seção de contato"
+    ```
 
-## Additional Resources
+3.  **Publique a Nova Versão**: Para atualizar o site online, use os comandos abaixo. Eles irão compilar o projeto e enviar o resultado para a branch `gh-pages` automaticamente.
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+    * **Para publicar a versão em Português (padrão):**
+        ```bash
+        # 1. Compila o projeto para produção
+        ng build --configuration production --base-href "/leomarotta.github.io/"
+        
+        # 2. Envia o conteúdo da pasta de 'dist' para a branch gh-pages
+        # (Lembre-se de confirmar o nome da pasta de saída com 'ls dist/')
+        ngh --dir=dist/portfolio 
+        ```
+
+    * **Para publicar a versão em Inglês:**
+        ```bash
+        # 1. Compila o projeto usando a configuração 'en'
+        ng build --configuration=en
+        
+        # 2. Envia para uma subpasta no mesmo branch
+        ngh --dir=dist/portfolio/en --no-silent
+        ```
+
+## 📜 Scripts Disponíveis
+
+No arquivo `package.json`, você pode encontrar (ou criar) scripts para facilitar as tarefas comuns:
+
+* `npm start`: Roda o servidor de desenvolvimento em `http://localhost:4200/`.
+* `npm run build`: Compila o projeto para produção.
+* `npm test`: Executa os testes unitários com o Karma.
+
+*(Dica: Você pode criar atalhos para os comandos de deploy no seu `package.json` para facilitar ainda mais!)*
+
+## 📫 Contato
+
+* **Leonardo Marotta**
+* **LinkedIn:** [linkedin.com/in/leonardo-marotta](https://linkedin.com/in/leonardo-marotta)
+* **GitHub:** [github.com/LeoMarotta](https://github.com/LeoMarotta)
+* **Email:** [lgmarotta@inf.ufpel.edu.br](mailto:lgmarotta@inf.ufpel.edu.br)
