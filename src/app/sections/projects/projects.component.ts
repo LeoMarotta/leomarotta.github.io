@@ -1,10 +1,14 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { MatButtonModule } from '@angular/material/button'; // <-- IMPORTAR
+import { MatIconModule } from '@angular/material/icon';   // <-- IMPORTAR
 
 @Component({
   selector: 'app-projects',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule, MatButtonModule, MatIconModule], // <-- ADICIONAR
   templateUrl: './projects.component.html',
-  styleUrl: './projects.component.css'
+  styleUrls: ['./projects.component.css']
 })
 export class ProjectsComponent {
 

@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { MatChipsModule } from '@angular/material/chips'; // <-- IMPORTAR AQUI
 
 @Component({
   selector: 'app-skills',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule, MatChipsModule], // <-- ADICIONAR AQUI
   templateUrl: './skills.component.html',
-  styleUrl: './skills.component.css'
+  styleUrls: ['./skills.component.css']
 })
 export class SkillsComponent {
 

@@ -1,10 +1,14 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { MatButtonModule } from '@angular/material/button'; // <-- IMPORTAR
+import { MatIconModule } from '@angular/material/icon';   // <-- IMPORTAR
 
 @Component({
   selector: 'app-hero',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule, MatButtonModule, MatIconModule], // <-- ADICIONAR
   templateUrl: './hero.component.html',
-  styleUrl: './hero.component.css'
+  styleUrls: ['./hero.component.css']
 })
 export class HeroComponent {
 

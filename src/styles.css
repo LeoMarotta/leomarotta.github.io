@@ -1,4 +1,50 @@
-/* You can add global styles to this file, and also import other style files */
+/* Reseta margens padrão para um layout de tela cheia mais preciso */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif; /* Fonte padrão do Material Design */
+  background-color: #ffffff;
+  color: #333;
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/* O seletor 'app-root > *' aplica estes estilos a todos os componentes
+   diretamente dentro de app.component.html (app-hero, app-about, etc.) */
+app-root > * {
+  /* Layout: cada seção ocupa a tela inteira e centraliza seu conteúdo */
+  height: 100vh;
+  width: 100%;
+  padding: 2rem;
+  box-sizing: border-box; /* Garante que o padding não aumente o tamanho total */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+
+  /* Animação: configuração inicial dos elementos */
+  opacity: 0; /* Começa invisível */
+  transform: translateY(30px); /* Começa um pouco para baixo para um efeito de subida */
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Define a suavidade da animação */
+}
+
+/* Classe que é adicionada via TypeScript para ativar a animação */
+app-root > *.is-visible {
+  opacity: 1; /* Torna a seção visível */
+  transform: translateY(0); /* Move a seção para sua posição final */
+}
+
+/* Estilos gerais para títulos e parágrafos para consistência */
+h1, h2, h3 {
+  color: #2c3e50;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 700px;
+}

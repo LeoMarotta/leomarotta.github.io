@@ -1,0 +1,49 @@
+.hero-content {
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+}
+
+.profile-image-container {
+width: 150px; /* Ajuste o tamanho conforme necessário */
+height: 150px; /* Ajuste o tamanho conforme necessário */
+border-radius: 50%; /* Cria o efeito circular */
+overflow: hidden; /* Garante que a imagem fique dentro do círculo */
+margin-bottom: 1.5rem; /* Espaço entre a imagem e o texto */
+border: 5px solid #f8f9fa; /* Uma borda suave para destacar (opcional) */
+}
+
+.profile-image-container img {
+width: 100%;
+height: 100%;
+object-fit: cover; /* Preenche o círculo mantendo a proporção */
+}
+
+.hero-title {
+font-size: 2.8rem;
+margin-bottom: 0.5rem;
+}
+
+.hero-subtitle {
+font-size: 1.2rem;
+color: #6c757d;
+margin-bottom: 1.5rem;
+max-width: 600px;
+}
+
+.hero-actions a {
+margin: 0 0.5rem;
+}
+
+.hero-navigation {
+display: flex;
+gap: 1rem;
+margin-top: 1.5rem;
+justify-content: center;
+}
+
+.hero-navigation a {
+font-size: 1rem;
+text-decoration: none;
+}
