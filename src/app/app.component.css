@@ -1,0 +1,75 @@
+:host {
+  display: block;
+  position: relative;
+}
+
+.page-timeline {
+  position: fixed;
+  top: 50%;
+  right: 30px;
+  transform: translateY(-50%);
+  z-index: 1000;
+}
+
+.page-timeline ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.page-timeline ul::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background-color: #34495e;
+}
+
+.timeline-dot {
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #34495e;
+  border: 2px solid #121212;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+.timeline-dot.is-active {
+  background-color: #3498db;
+  transform: scale(1.5);
+  box-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
+}
+
+.timeline-dot:hover {
+  transform: scale(1.5);
+}
+
+/* Confirme se este seletor está correto, apontando para os filhos de 'main' */
+main > * {
+  height: 100vh;
+  width: 100%;
+  padding: 2rem;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+main > *.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}

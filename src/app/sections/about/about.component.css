@@ -1,0 +1,45 @@
+/* Container principal da seção 'Sobre Mim' */
+.about-container {
+  /* Usamos flexbox para alinhar e centralizar o conteúdo facilmente */
+  display: flex;
+  flex-direction: column; /* Organiza os itens em uma coluna (título acima dos parágrafos) */
+  align-items: center;   /* Centraliza tudo horizontalmente */
+
+  /* Limita a largura do texto para melhor legibilidade em telas grandes */
+  max-width: 800px;
+
+  /* Garante um pequeno espaçamento nas laterais em telas menores */
+  padding: 0 1rem;
+}
+
+/* Estilização do título da seção */
+.about-container h2 {
+  position: relative; /* Necessário para o pseudo-elemento ::after */
+  padding-bottom: 0.5rem; /* Espaço entre o texto e a linha decorativa */
+  margin-bottom: 2rem; /* Espaço entre o título e o primeiro parágrafo */
+}
+
+/* Linha decorativa abaixo do título, usando a cor de destaque do nosso design */
+.about-container h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%); /* Centraliza a linha abaixo do texto */
+  width: 80px; /* Largura da linha */
+  height: 3px; /* Espessura da linha */
+  background-color: #3498db; /* Cor primária/destaque que definimos */
+  border-radius: 2px;
+}
+
+/* Estilização dos parágrafos */
+.about-container p {
+  text-align: center; /* Alinha o texto ao centro */
+  margin-bottom: 1.5rem; /* Espaçamento entre os parágrafos */
+  color: #a0a0a0; /* Usando a cor de texto secundária para um contraste suave */
+}
+
+/* Remove a margem do último parágrafo para um espaçamento mais limpo */
+.about-container p:last-child {
+  margin-bottom: 0;
+}

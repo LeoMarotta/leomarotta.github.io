@@ -1,23 +1,61 @@
-/* O container principal usa flexbox para organizar e centralizar todo o seu conteúdo verticalmente. */
+/* Container principal da seção de Contato */
 .contact-container {
   display: flex;
-  flex-direction: column; /* Organiza os itens em uma coluna: Título, depois Parágrafo, depois Links */
-  align-items: center;   /* Centraliza todos os itens horizontalmente */
+  flex-direction: column;
+  align-items: center;
   text-align: center;
+  padding: 2rem;
+  box-sizing: border-box;
 }
 
-/* O container dos links também usa flexbox para garantir que os botões fiquem alinhados e com espaço. */
+/* Estilização do título H2 */
+.contact-container h2 {
+  position: relative;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Adiciona a linha decorativa abaixo do título, para consistência visual */
+.contact-container h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: #3498db; /* Nossa cor de destaque primária */
+  border-radius: 2px;
+}
+
+/* Estilização do parágrafo de introdução */
+.contact-container p {
+  max-width: 600px;
+  margin-bottom: 2.5rem; /* Aumenta o espaço antes dos botões */
+  color: #a0a0a0; /* Cor de texto secundária para contraste suave */
+  font-size: 1.2rem;
+}
+
+/* Container dos botões de link */
 .contact-links {
   display: flex;
-  flex-wrap: wrap; /* Permite que os botões quebrem a linha em telas menores */
-  justify-content: center; /* Centraliza os botões dentro do seu próprio container */
-  gap: 1rem; /* Espaçamento entre os botões */
-  margin-top: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem; /* Aumenta um pouco o espaço entre os botões */
 }
 
-/* Garante que o ícone e o texto dentro do botão fiquem bem alinhados */
+/* Estilização e efeito de hover para os botões */
 .contact-links a {
+  /* O Angular Material aplica a cor primária aqui se você usar color="primary" no HTML */
+  font-size: 1rem;
+  padding: 0.8rem 1.5rem;
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.8rem;
+  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out; /* Animação suave */
+}
+
+.contact-links a:hover {
+  transform: translateY(-3px); /* Efeito de "levantar" o botão */
+  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.2); /* Brilho sutil com a cor de destaque */
 }

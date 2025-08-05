@@ -1,3 +1,4 @@
+/* Container geral da seção */
 .experience-wrapper {
   width: 100%;
   max-width: 1100px;
@@ -6,6 +7,7 @@
   align-items: center;
 }
 
+/* Container da timeline, que segura a linha e os itens */
 .timeline {
   width: 100%;
   position: relative;
@@ -21,9 +23,11 @@
   transform: translateX(-50%);
   width: 3px;
   height: 100%;
-  background-color: #e9ecef;
+  /* Cor ajustada para o tema escuro */
+  background-color: #34495e;
 }
 
+/* Cada item da timeline (data, ponto, conteúdo) */
 .timeline-item {
   display: flex;
   justify-content: flex-end;
@@ -37,14 +41,22 @@
   flex-direction: row-reverse;
 }
 
+/* O card que contém as informações da experiência */
 .timeline-content {
   width: 45%;
-  background: #2c3e50; /* Cor escura inspirada na imagem */
-  color: #ecf0f1;
+  background: #1e1e3f; /* Cor de superfície do nosso tema */
+  color: #e0e0e0; /* Cor de texto padrão */
   padding: 20px 30px;
   border-radius: 8px;
   position: relative;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  border: 1px solid #34495e;
+  /* Transição suave para o efeito de hover */
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+.timeline-content:hover {
+  transform: translateY(-5px); /* Efeito de "levantar" */
+  box-shadow: 0 8px 25px rgba(52, 152, 219, 0.15); /* Brilho sutil com a cor de destaque */
 }
 
 /* A pequena seta que aponta para a linha do tempo */
@@ -55,7 +67,7 @@
   right: -15px;
   border-width: 8px 0 8px 16px;
   border-style: solid;
-  border-color: transparent transparent transparent #2c3e50;
+  border-color: transparent transparent transparent #1e1e3f; /* Cor igual ao fundo do card */
 }
 
 .timeline-item:nth-child(even) .timeline-content {
@@ -66,14 +78,15 @@
   right: auto;
   left: -15px;
   border-width: 8px 16px 8px 0;
-  border-color: transparent #2c3e50 transparent transparent;
+  border-color: transparent #1e1e3f transparent transparent;
 }
 
+/* O ponto central na linha do tempo */
 .timeline-dot {
   width: 50px;
   height: 50px;
-  background-color: #3498db; /* Cor de destaque */
-  border: 3px solid #ffffff;
+  background-color: #3498db; /* Cor de destaque primária */
+  border: 4px solid #121212; /* Borda com a cor do fundo principal, para efeito de "recorte" */
   border-radius: 50%;
   position: absolute;
   left: 50%;
@@ -83,18 +96,26 @@
   justify-content: center;
   align-items: center;
   z-index: 1;
+  transition: box-shadow 0.3s ease-out;
+}
+
+.timeline-item:hover .timeline-dot {
+    box-shadow: 0 0 15px rgba(52, 152, 219, 0.5); /* Efeito de brilho no hover do item */
 }
 
 .timeline-dot mat-icon {
   color: white;
 }
 
+/* A data ao lado da linha do tempo */
 .timeline-date {
   width: 45%;
   font-size: 1.2rem;
   font-weight: bold;
   padding: 10px 40px;
-  color: #34495e;
+  /* Cor ajustada para ser legível no fundo escuro */
+  color: #a0a0a0;
+  box-sizing: border-box;
 }
 
 .timeline-item:nth-child(odd) .timeline-date {
@@ -105,8 +126,9 @@
   text-align: right;
 }
 
+/* Estilos dentro do card */
 .job-title {
-  color: #3498db;
+  color: #3498db; /* Cor de destaque primária */
   margin-top: 0;
 }
 
@@ -114,6 +136,7 @@
   font-style: italic;
   font-size: 0.9rem;
   margin-bottom: 1rem;
+  color: #a0a0a0; /* Cor de texto secundária */
 }
 
 .timeline-content ul {
@@ -122,8 +145,15 @@
   text-align: left;
 }
 
+.timeline-item:nth-child(even) .timeline-content ul {
+  direction: rtl; /* Inverte a direção da lista para alinhar à direita */
+  padding-left: 0;
+  padding-right: 20px;
+}
+
+/* Tags de tecnologia */
 .tech-tags {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
@@ -135,8 +165,14 @@
 }
 
 .tech-tags span {
-  background-color: rgba(255, 255, 255, 0.1);
-  padding: 5px 10px;
+  background-color: #34495e; /* Fundo mais escuro e sutil */
+  color: #ecf0f1; /* Texto claro */
+  padding: 5px 12px;
   border-radius: 15px;
   font-size: 0.8rem;
+  transition: background-color 0.2s ease-out;
+}
+
+.tech-tags span:hover {
+  background-color: #3498db; /* Muda para a cor de destaque no hover */
 }

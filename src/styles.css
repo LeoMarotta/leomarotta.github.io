@@ -1,21 +1,23 @@
-/* Reseta margens padrão para um layout de tela cheia mais preciso */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+/* Reseta margens padrão e define o tema escuro base */
 html, body {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif; /* Fonte padrão do Material Design */
-  background-color: #ffffff;
-  color: #333;
+  font-family: 'Roboto', sans-serif;
   scroll-behavior: smooth;
+  background-color: #121212;
+  color: #e0e0e0;
 }
 
-/* O seletor 'app-root > *' aplica estes estilos a todos os componentes
-   diretamente dentro de app.component.html (app-hero, app-about, etc.) */
-app-root > * {
-  /* Layout: cada seção ocupa a tela inteira e centraliza seu conteúdo */
+/* --- MUDANÇA CRÍTICA AQUI --- */
+/* O seletor agora é 'main > *', aplicando os estilos diretamente às seções
+   dentro da tag <main>, que é o comportamento correto. */
+main > * {
   height: 100vh;
   width: 100%;
   padding: 2rem;
-  box-sizing: border-box; /* Garante que o padding não aumente o tamanho total */
+  box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,20 +25,21 @@ app-root > * {
   flex-direction: column;
 
   /* Animação: configuração inicial dos elementos */
-  opacity: 0; /* Começa invisível */
-  transform: translateY(30px); /* Começa um pouco para baixo para um efeito de subida */
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Define a suavidade da animação */
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
-/* Classe que é adicionada via TypeScript para ativar a animação */
-app-root > *.is-visible {
-  opacity: 1; /* Torna a seção visível */
-  transform: translateY(0); /* Move a seção para sua posição final */
+/* A classe que ativa a animação agora é aplicada ao mesmo seletor */
+main > *.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-/* Estilos gerais para títulos e parágrafos para consistência */
+/* Estilos gerais para títulos, agora com cores para o tema escuro */
 h1, h2, h3 {
-  color: #2c3e50;
+  font-weight: 500;
+  color: #f5f5f5;
 }
 
 h2 {
@@ -44,6 +47,7 @@ h2 {
   margin-bottom: 2rem;
 }
 
+/* Estilos para parágrafos */
 p {
   font-size: 1.1rem;
   line-height: 1.6;
