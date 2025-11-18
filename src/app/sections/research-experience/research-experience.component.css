@@ -10,9 +10,9 @@
 
   min-height: 80vh;
 
-  scroll-margin-top: 250px;
+  scroll-margin-top: 150px;
 
-  padding-top: 7rem;
+  padding-top: 5rem;
   padding-bottom: 2rem;
 }
 
@@ -20,7 +20,7 @@
   width: 100%;
   position: relative;
 
-  padding: 6rem 0 2rem 0;
+  padding: 4rem 0 2rem 0;
 }
 
 .timeline::before {
@@ -145,13 +145,13 @@
   text-align: left;
 }
 
-/* LISTA ITENS PARES (Lado direito): Mantém o texto alinhado à esquerda */
+/* LISTA ITENS PARES (Lado direito): Removemos o text-align: right e direction: rtl */
 .timeline-item-even .timeline-content ul {
   list-style-type: disc;
-  list-style-position: inside;
-  padding-left: 20px;
+  list-style-position: inside; /* Mantido para centralizar o marcador */
+  padding-left: 20px; /* Adicionado padding à esquerda para o marcador */
   padding-right: 0;
-  text-align: left; /* CORREÇÃO AQUI: Garante o alinhamento esquerdo */
+  text-align: left; /* CORREÇÃO AQUI: Mantém o texto alinhado à esquerda */
 }
 
 .tech-tags {
