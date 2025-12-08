@@ -74,11 +74,11 @@ Este projeto utiliza duas branches com propósitos distintos. Entender essa sepa
     * **Para publicar a versão em Português (padrão):**
         ```bash
         # 1. Compila o projeto para produção
-        ng build --configuration production --base-href "/leomarotta.github.io/"
+        ng build --configuration production --base-href "/"
         
         # 2. Envia o conteúdo da pasta de 'dist' para a branch gh-pages
         # (Lembre-se de confirmar o nome da pasta de saída com 'ls dist/')
-        ngh --dir=dist/leomarotta.github.io 
+        ngh --dir=dist/leomarotta.github.io/browser
         ```
 
     * **Para publicar a versão em Inglês:**
