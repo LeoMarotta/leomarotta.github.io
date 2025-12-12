@@ -8,6 +8,9 @@ import { ResearchExperienceComponent } from './sections/research-experience/rese
 import { SkillsComponent } from './sections/skills/skills.component';
 import { ProjectsComponent } from './sections/projects/projects.component';
 import { ContactComponent } from './sections/contact/contact.component';
+import { EducationComponent } from './sections/education/education.component';
+import { LanguagesComponent } from './sections/languages/languages.component';
+import { LanguageSwitcherComponent } from './components/language-switcher/language-switcher.component';
 
 @Component({
   selector: 'app-root',
@@ -15,11 +18,14 @@ import { ContactComponent } from './sections/contact/contact.component';
   imports: [
     HeroComponent,
     AboutComponent,
+    EducationComponent,
     ExperienceComponent,
     ResearchExperienceComponent,
     SkillsComponent,
     ProjectsComponent,
-    ContactComponent
+    LanguagesComponent,
+    ContactComponent,
+    LanguageSwitcherComponent
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
@@ -45,22 +51,8 @@ export class AppComponent implements AfterViewInit {
 
     this.observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        const id = entry.target.getAttribute('id');
-        if (!id) return;
-
-        const activeLink = document.querySelector(`.page-timeline a[href="#${id}"]`);
-
         if (entry.isIntersecting) {
           entry.target.classList.add('is-visible');
-
-          document.querySelectorAll('.page-timeline a').forEach(link => {
-            link.classList.remove('is-active');
-          });
-
-          if (activeLink) {
-            activeLink.classList.add('is-active');
-          }
-
         } else {
           entry.target.classList.remove('is-visible');
         }

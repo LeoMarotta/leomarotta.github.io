@@ -1,0 +1,182 @@
+import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
+
+export interface Translations {
+  [key: string]: string;
+}
+
+@Injectable({
+  providedIn: 'root'
+})
+export class LanguageService {
+  private currentLanguageSubject = new BehaviorSubject<string>('pt');
+  public currentLanguage$ = this.currentLanguageSubject.asObservable();
+
+  private translations: { [lang: string]: Translations } = {
+    pt: {
+      'hero.title': 'Leonardo Gonçalves Marotta',
+      'hero.subtitle': 'Desenvolvedor Back-end, DevOps e graduando em Ciência da Computação pela UFPel',
+      'hero.about': 'Sobre Mim',
+      'hero.education': 'Formação',
+      'hero.experience': 'Experiência',
+      'hero.skills': 'Habilidades',
+      'hero.projects': 'Meus Projetos',
+      'hero.contact': 'Contato',
+      'about.title': 'Sobre Mim',
+      'about.text1': 'Com experiência em arquiteturas de nuvem, sistemas de IoT e desenvolvimento full-stack, atuo na construção e otimização de soluções serverless com AWS Lambda e na orquestração de ambientes com Docker. Já trabalhei em projetos front-end e back-end com React e Node.js e sou proficiente em linguagens como Python, Node.js, PHP (Laravel) e Java.',
+      'about.text2': 'Sou motivado por desafios que permitem meu crescimento em DevOps e desenvolvimento de software, buscando contribuir significativamente para o sucesso das equipes.',
+      'education.title': 'Formação Acadêmica',
+      'education.degree': 'Bacharelado em Ciência da Computação',
+      'education.status': 'Em progresso',
+      'experience.title': 'Experiência Profissional',
+      'skills.title': 'Habilidades Técnicas',
+      'skills.cloud': 'Cloud & DevOps',
+      'skills.languages': 'Linguagens',
+      'skills.frameworks': 'Frameworks & Bibliotecas',
+      'skills.databases': 'Bancos de Dados',
+      'skills.tools': 'Ferramentas & Outros',
+      'skills.security': 'Segurança',
+      'projects.title': 'Meus Projetos',
+      'projects.construction': 'Esta seção está em construção. Aqui você poderá ver uma seleção dos meus melhores projetos pessoais e de estudo.',
+      'projects.github': 'Ver meu GitHub',
+      'languages.title': 'Idiomas',
+      'lang.portuguese': 'Português',
+      'lang.english': 'Inglês',
+      'lang.spanish': 'Espanhol',
+      'lang.french': 'Francês',
+      'level.native': 'Nativo',
+      'level.fluent': 'Fluente',
+      'level.basic': 'Básico',
+      'contact.title': 'Contato',
+      'contact.description': 'Gostou do que viu? Vamos conversar! Sinta-se à vontade para entrar em contato ou se conectar comigo.',
+      'contact.email': 'Enviar Email',
+      'contact.linkedin': 'LinkedIn',
+      'contact.github': 'GitHub',
+      'exp.dev-backend': 'Desenvolvedor Back-end e DevOps',
+      'exp.dev-backend-intern': 'Desenvolvedor Back-end (Estagiário)',
+      'exp.dev-software-intern': 'Desenvolvedor de Software (Estagiário)',
+      'exp.researcher': 'Pesquisador Voluntário',
+      'exp.desc1.1': 'Desenvolvi sistema de precificação completo com PHP (Laravel) e PostgreSQL.',
+      'exp.desc1.2': 'Liderei ciclo completo de aplicações: modelagem, desenvolvimento e deploy AWS.',
+      'exp.desc1.3': 'Implementei melhorias de segurança e otimização de custos na infraestrutura cloud.',
+      'exp.desc1.4': 'Evoluí plataforma principal focando em escalabilidade para dados IoT.',
+      'exp.desc2.1': 'Criei fluxo orientado a eventos com AWS Lambda (Python) para processar mensagens IoT.',
+      'exp.desc2.2': 'Mantive e desenvolvi funcionalidades em PHP (Laravel) focando em performance.',
+      'exp.desc2.3': 'Padronizei ambientes com Docker entre desenvolvimento e produção.',
+      'exp.desc2.4': 'Reestruturei pipeline de deploy AWS com melhorias de segurança e CDN.',
+      'exp.desc3.1': 'Desenvolvi aplicações full-stack Java com framework proprietário e PostgreSQL.',
+      'exp.desc3.2': 'Mantive aplicações Java corrigindo bugs e implementando melhorias.',
+      'exp.desc3.3': 'Elaborei documentação técnica detalhada para facilitar manutenção.',
+      'exp.desc4.1': 'Analisei dados de pesquisas científicas e interpretei resultados.',
+      'exp.desc4.2': 'Executei tarefas de NLP e análise de riscos/vulnerabilidades.',
+      'exp.desc4.3': 'Desenvolvi anotações de datasets e relatórios de pesquisa.',
+      'period.sep2024-present': 'Setembro 2024 - Presente',
+      'period.jan2024-sep2024': 'Janeiro 2024 - Setembro 2024',
+      'period.nov2023-jan2024': 'Novembro 2023 - Janeiro 2024',
+      'period.jul2024-present': 'Julho 2024 - Presente',
+      'tag.research': 'pesquisa',
+      'tag.vpc': 'vpc',
+      'tag.security-headers': 'headers-seguranca',
+      'tag.cost-optimization': 'otimizacao-custos',
+      'tag.aws-lambda': 'aws-lambda',
+      'tag.iot': 'iot',
+      'tag.serverless': 'serverless',
+      'tag.cdn': 'cdn',
+      'tag.payara': 'payara',
+      'tag.documentation': 'documentacao',
+      'tag.bug-fixing': 'correcao-bugs',
+      'tag.data-analysis': 'analise-dados',
+      'tag.vulnerability-analysis': 'analise-vulnerabilidades',
+      'tag.datasets': 'datasets'
+    },
+    en: {
+      'hero.title': 'Leonardo Gonçalves Marotta',
+      'hero.subtitle': 'Back-end Developer, DevOps and Computer Science student at UFPel',
+      'hero.about': 'About Me',
+      'hero.education': 'Education',
+      'hero.experience': 'Experience',
+      'hero.skills': 'Skills',
+      'hero.projects': 'My Projects',
+      'hero.contact': 'Contact',
+      'about.title': 'About Me',
+      'about.text1': 'With experience in cloud architectures, IoT systems and full-stack development, I work on building and optimizing serverless solutions with AWS Lambda and orchestrating environments with Docker. I have worked on front-end and back-end projects with React and Node.js and am proficient in languages such as Python, Node.js, PHP (Laravel) and Java.',
+      'about.text2': 'I am motivated by challenges that allow my growth in DevOps and software development, seeking to contribute significantly to team success.',
+      'education.title': 'Academic Background',
+      'education.degree': 'Bachelor in Computer Science',
+      'education.status': 'In progress',
+      'experience.title': 'Professional Experience',
+      'skills.title': 'Technical Skills',
+      'skills.cloud': 'Cloud & DevOps',
+      'skills.languages': 'Languages',
+      'skills.frameworks': 'Frameworks & Libraries',
+      'skills.databases': 'Databases',
+      'skills.tools': 'Tools & Others',
+      'skills.security': 'Security',
+      'projects.title': 'My Projects',
+      'projects.construction': 'This section is under construction. Here you will be able to see a selection of my best personal and study projects.',
+      'projects.github': 'View my GitHub',
+      'languages.title': 'Languages',
+      'lang.portuguese': 'Portuguese',
+      'lang.english': 'English',
+      'lang.spanish': 'Spanish',
+      'lang.french': 'French',
+      'level.native': 'Native',
+      'level.fluent': 'Fluent',
+      'level.basic': 'Basic',
+      'contact.title': 'Contact',
+      'contact.description': 'Liked what you saw? Let\'s talk! Feel free to get in touch or connect with me.',
+      'contact.email': 'Send Email',
+      'contact.linkedin': 'LinkedIn',
+      'contact.github': 'GitHub',
+      'exp.dev-backend': 'Back-end Developer and DevOps',
+      'exp.dev-backend-intern': 'Back-end Developer (Intern)',
+      'exp.dev-software-intern': 'Software Developer (Intern)',
+      'exp.researcher': 'Volunteer Researcher',
+      'exp.desc1.1': 'Developed complete pricing system with PHP (Laravel) and PostgreSQL.',
+      'exp.desc1.2': 'Led complete application lifecycle: modeling, development and AWS deployment.',
+      'exp.desc1.3': 'Implemented security improvements and cost optimization in cloud infrastructure.',
+      'exp.desc1.4': 'Evolved main platform focusing on scalability for IoT data.',
+      'exp.desc2.1': 'Created event-driven workflow with AWS Lambda (Python) to process IoT messages.',
+      'exp.desc2.2': 'Maintained and developed PHP (Laravel) features focusing on performance.',
+      'exp.desc2.3': 'Standardized environments with Docker between development and production.',
+      'exp.desc2.4': 'Restructured AWS deploy pipeline with security improvements and CDN.',
+      'exp.desc3.1': 'Developed full-stack Java applications with proprietary framework and PostgreSQL.',
+      'exp.desc3.2': 'Maintained Java applications fixing bugs and implementing improvements.',
+      'exp.desc3.3': 'Created detailed technical documentation to facilitate maintenance.',
+      'exp.desc4.1': 'Analyzed scientific research data and interpreted results.',
+      'exp.desc4.2': 'Executed NLP tasks and risk/vulnerability analysis.',
+      'exp.desc4.3': 'Developed dataset annotations and research reports.',
+      'period.sep2024-present': 'September 2024 - Present',
+      'period.jan2024-sep2024': 'January 2024 - September 2024',
+      'period.nov2023-jan2024': 'November 2023 - January 2024',
+      'period.jul2024-present': 'July 2024 - Present',
+      'tag.research': 'research',
+      'tag.vpc': 'vpc',
+      'tag.security-headers': 'security-headers',
+      'tag.cost-optimization': 'cost-optimization',
+      'tag.aws-lambda': 'aws-lambda',
+      'tag.iot': 'iot',
+      'tag.serverless': 'serverless',
+      'tag.cdn': 'cdn',
+      'tag.payara': 'payara',
+      'tag.documentation': 'documentation',
+      'tag.bug-fixing': 'bug-fixing',
+      'tag.data-analysis': 'data-analysis',
+      'tag.vulnerability-analysis': 'vulnerability-analysis',
+      'tag.datasets': 'datasets'
+    }
+  };
+
+  switchLanguage(lang: string) {
+    this.currentLanguageSubject.next(lang);
+  }
+
+  getCurrentLanguage(): string {
+    return this.currentLanguageSubject.value;
+  }
+
+  translate(key: string): string {
+    const lang = this.getCurrentLanguage();
+    return this.translations[lang]?.[key] || key;
+  }
+}

@@ -1,0 +1,88 @@
+.languages-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  padding: 0 1rem;
+}
+
+.languages-container h2 {
+  position: relative;
+  padding-bottom: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.languages-container h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: #3498db;
+  border-radius: 2px;
+}
+
+.languages-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 600px;
+}
+
+.language-card {
+  background: #1e1e3f;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid #34495e;
+  text-align: center;
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+.language-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.1);
+  border-radius: 16px;
+}
+
+.language-flag {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.language-card h3 {
+  color: #3498db;
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.language-card p {
+  color: #a0a0a0;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .languages-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .languages-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .language-card {
+    padding: 1rem;
+  }
+
+  .language-flag {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+}

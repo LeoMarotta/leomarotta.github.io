@@ -1,10 +1,8 @@
 <div id="projects">
-    <h2 i18n>Meus Projetos</h2>
-    <p i18n>
-      Esta seção está em construção. Aqui você poderá ver uma seleção dos meus melhores projetos pessoais e de estudo.
-    </p>
+    <h2>{{ languageService.translate('projects.title') }}</h2>
+    <p>{{ languageService.translate('projects.construction') }}</p>
     <a mat-raised-button color="primary" href="https://github.com/LeoMarotta" target="_blank">
         <mat-icon>code</mat-icon>
-        Ver meu GitHub
+        {{ languageService.translate('projects.github') }}
     </a>
 </div>

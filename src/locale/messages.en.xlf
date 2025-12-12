@@ -1,34 +1,42 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+  <file source-language="pt-BR" target-language="en-US" datatype="plaintext" original="ng2.template">
     <body>
-      <trans-unit id="215796148514377605" datatype="html">
-        <source>Leonardo Gonçalves Marotta [cite: 1]</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/app.component.html</context>
-          <context context-type="linenumber">2,4</context>
-        </context-group>
+      <trans-unit id="hero-title" datatype="html">
+        <source>Leonardo Gonçalves Marotta</source>
+        <target>Leonardo Gonçalves Marotta</target>
       </trans-unit>
-      <trans-unit id="5811392369099542341" datatype="html">
-        <source>Desenvolvedor Back-end, DevOps e graduando em Ciência da Computação. [cite: 5]</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/app.component.html</context>
-          <context context-type="linenumber">4,6</context>
-        </context-group>
+      <trans-unit id="hero-subtitle" datatype="html">
+        <source>Desenvolvedor Back-end, DevOps e graduando em Ciência da Computação pela UFPel</source>
+        <target>Back-end Developer, DevOps and Computer Science student at UFPel</target>
       </trans-unit>
-      <trans-unit id="1582473840410988707" datatype="html">
+      <trans-unit id="about-title" datatype="html">
+        <source>Sobre Mim</source>
+        <target>About Me</target>
+      </trans-unit>
+      <trans-unit id="education-title" datatype="html">
+        <source>Formação Acadêmica</source>
+        <target>Academic Background</target>
+      </trans-unit>
+      <trans-unit id="experience-title" datatype="html">
+        <source>Experiência Profissional</source>
+        <target>Professional Experience</target>
+      </trans-unit>
+      <trans-unit id="skills-title" datatype="html">
+        <source>Habilidades Técnicas</source>
+        <target>Technical Skills</target>
+      </trans-unit>
+      <trans-unit id="projects-title" datatype="html">
         <source>Meus Projetos</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/app.component.html</context>
-          <context context-type="linenumber">7,8</context>
-        </context-group>
+        <target>My Projects</target>
       </trans-unit>
-      <trans-unit id="1236061678414703716" datatype="html">
+      <trans-unit id="languages-title" datatype="html">
+        <source>Idiomas</source>
+        <target>Languages</target>
+      </trans-unit>
+      <trans-unit id="contact-title" datatype="html">
         <source>Contato</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/app.component.html</context>
-          <context context-type="linenumber">8,9</context>
-        </context-group>
+        <target>Contact</target>
       </trans-unit>
     </body>
   </file>

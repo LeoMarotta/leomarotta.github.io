@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { LanguageService } from '../../services/language.service';
 
 @Component({
-  selector: 'app-about',
+  selector: 'app-education',
+  standalone: true,
   imports: [],
-  templateUrl: './about.component.html',
-  styleUrl: './about.component.css'
+  templateUrl: './education.component.html',
+  styleUrls: ['./education.component.css']
 })
-export class AboutComponent {
+export class EducationComponent {
   constructor(public languageService: LanguageService) {}
 }

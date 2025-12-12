@@ -2,13 +2,15 @@
   <div class="profile-image-container">
     <img src="assets/foto.jpeg" alt="Foto de Leonardo Marotta">
   </div>
-  <h1 i18n class="hero-title">Olá!</h1>
-  <p i18n class="hero-subtitle">Sou Leonardo, desenvolvedor Back-end, DevOps e estudante de Ciência da Computação.</p>
+  <h1 class="hero-title">{{ languageService.translate('hero.title') }}</h1>
+  <p class="hero-subtitle">{{ languageService.translate('hero.subtitle') }}</p>
+  <p class="hero-location">📍 Brasil</p>
   <div class="hero-navigation">
-    <a mat-button href="#about" i18n>Sobre Mim</a>
-    <a mat-button href="#experience" i18n>Experiência</a>
-    <a mat-button href="#skills" i18n>Habilidades</a>
-    <a mat-button color="primary" href="#projects" i18n>Meus Projetos</a>
-    <a mat-button href="#contact" i18n>Contato</a>
+    <a mat-button href="#about">{{ languageService.translate('hero.about') }}</a>
+    <a mat-button href="#education">{{ languageService.translate('hero.education') }}</a>
+    <a mat-button href="#experience">{{ languageService.translate('hero.experience') }}</a>
+    <a mat-button href="#skills">{{ languageService.translate('hero.skills') }}</a>
+    <a mat-button color="primary" href="#projects">{{ languageService.translate('hero.projects') }}</a>
+    <a mat-button href="#contact">{{ languageService.translate('hero.contact') }}</a>
   </div>
 </div>

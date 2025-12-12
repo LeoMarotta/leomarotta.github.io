@@ -1,44 +1,92 @@
 <div id="skills" style="max-width: 1000px; width: 100%;">
-  <h2 i18n>Habilidades Técnicas</h2>
-  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem;">
+  <h2>{{ languageService.translate('skills.title') }}</h2>
+  <div class="skills-container">
 
     <div class="skill-category">
-      <h3 i18n>Cloud & DevOps</h3>
+      <h3>{{ languageService.translate('skills.cloud') }}</h3>
       <mat-chip-listbox aria-label="Cloud & DevOps Skills">
-        <mat-chip>AWS</mat-chip>
+        <mat-chip>AWS Lambda</mat-chip>
+        <mat-chip>CloudFront</mat-chip>
+        <mat-chip>Route 53</mat-chip>
+        <mat-chip>SQS</mat-chip>
+        <mat-chip>EC2</mat-chip>
+        <mat-chip>S3</mat-chip>
+        <mat-chip>CloudWatch</mat-chip>
+        <mat-chip>VPC</mat-chip>
         <mat-chip>Docker</mat-chip>
+        <mat-chip>Docker Compose</mat-chip>
         <mat-chip>CI/CD</mat-chip>
         <mat-chip>Git</mat-chip>
+        <mat-chip>GitHub Actions</mat-chip>
       </mat-chip-listbox>
     </div>
 
     <div class="skill-category">
-      <h3 i18n>Linguagens</h3>
+      <h3>{{ languageService.translate('skills.languages') }}</h3>
       <mat-chip-listbox aria-label="Programming Languages">
         <mat-chip>Python</mat-chip>
         <mat-chip>Node.js</mat-chip>
         <mat-chip>PHP</mat-chip>
         <mat-chip>Java</mat-chip>
         <mat-chip>JavaScript</mat-chip>
+        <mat-chip>C</mat-chip>
+        <mat-chip>C#</mat-chip>
       </mat-chip-listbox>
     </div>
 
     <div class="skill-category">
-      <h3 i18n>Frameworks & Bibliotecas</h3>
+      <h3>{{ languageService.translate('skills.frameworks') }}</h3>
       <mat-chip-listbox aria-label="Frameworks & Libraries">
         <mat-chip>Laravel</mat-chip>
-        <mat-chip>Spring</mat-chip>
+        <mat-chip>Spring Framework</mat-chip>
         <mat-chip>Express.js</mat-chip>
         <mat-chip>React</mat-chip>
+        <mat-chip>Pandas</mat-chip>
+        <mat-chip>NumPy</mat-chip>
+        <mat-chip>NLTK</mat-chip>
+        <mat-chip>Matplotlib</mat-chip>
+        <mat-chip>Selenium</mat-chip>
+        <mat-chip>JUnit</mat-chip>
+        <mat-chip>Mockito</mat-chip>
       </mat-chip-listbox>
     </div>
 
     <div class="skill-category">
-      <h3 i18n>Bancos de Dados</h3>
+      <h3>{{ languageService.translate('skills.databases') }}</h3>
       <mat-chip-listbox aria-label="Databases">
         <mat-chip>PostgreSQL</mat-chip>
         <mat-chip>MongoDB</mat-chip>
         <mat-chip>MySQL</mat-chip>
+      </mat-chip-listbox>
+    </div>
+
+    <div class="skill-category">
+      <h3>{{ languageService.translate('skills.tools') }}</h3>
+      <mat-chip-listbox aria-label="Tools & Others">
+        <mat-chip>Swagger</mat-chip>
+        <mat-chip>Maven</mat-chip>
+        <mat-chip>Postman</mat-chip>
+        <mat-chip>Linux</mat-chip>
+        <mat-chip>Bash</mat-chip>
+        <mat-chip>JSON</mat-chip>
+        <mat-chip>REST APIs</mat-chip>
+        <mat-chip>Microservices</mat-chip>
+        <mat-chip>Serverless</mat-chip>
+        <mat-chip>IoT</mat-chip>
+      </mat-chip-listbox>
+    </div>
+
+    <div class="skill-category">
+      <h3>{{ languageService.translate('skills.security') }}</h3>
+      <mat-chip-listbox aria-label="Security">
+        <mat-chip>Security Headers</mat-chip>
+        <mat-chip>HTTPS/TLS</mat-chip>
+        <mat-chip>CORS</mat-chip>
+        <mat-chip>CSP</mat-chip>
+        <mat-chip>OWASP</mat-chip>
+        <mat-chip>Authentication</mat-chip>
+        <mat-chip>Authorization</mat-chip>
+        <mat-chip>JWT</mat-chip>
       </mat-chip-listbox>
     </div>
 

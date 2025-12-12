@@ -1,21 +1,13 @@
-<nav class="page-timeline">
-  <ul>
-    <li><a href="#hero" class="timeline-dot" data-section="hero" aria-label="Início"></a></li>
-    <li><a href="#about" class="timeline-dot" data-section="about" aria-label="Sobre Mim"></a></li>
-    <li><a href="#experience" class="timeline-dot" data-section="experience" aria-label="Experiência"></a></li>
-    <li><a href="#research-experience" class="timeline-dot" data-section="research-experience" aria-label="Experiência Adicional"></a></li>
-    <li><a href="#skills" class="timeline-dot" data-section="skills" aria-label="Habilidades"></a></li>
-    <li><a href="#projects" class="timeline-dot" data-section="projects" aria-label="Projetos"></a></li>
-    <li><a href="#contact" class="timeline-dot" data-section="contact" aria-label="Contato"></a></li>
-  </ul>
-</nav>
+<app-language-switcher></app-language-switcher>
 
 <main>
   <app-hero #section id="hero"></app-hero>
   <app-about #section id="about"></app-about>
+  <app-education #section id="education"></app-education>
   <app-experience #section id="experience"></app-experience>
   <app-research-experience #section id="research-experience"></app-research-experience>
   <app-skills #section id="skills"></app-skills>
   <app-projects #section id="projects"></app-projects>
+  <app-languages #section id="languages"></app-languages>
   <app-contact #section id="contact"></app-contact>
 </main>

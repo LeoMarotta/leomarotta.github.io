@@ -13,18 +13,21 @@ Este é o repositório do meu portfólio pessoal, desenvolvido para apresentar m
 
 ## ✨ Funcionalidades
 
-* **Design Responsivo:** Totalmente adaptável para visualização em desktops, tablets e celulares.
-* **Seções Profissionais:** Inclui seções detalhadas sobre mim, minhas habilidades técnicas, experiência profissional e projetos.
-* **Internacionalização (i18n):** Suporte para múltiplos idiomas (Português e Inglês) para alcançar uma audiência global.
-* **Componentes Reutilizáveis:** Construído com a arquitetura baseada em componentes do Angular para fácil manutenção.
+* **Design Responsivo:** Totalmente adaptável para visualização em desktops, tablets e celulares com layout mobile-first.
+* **Seções Profissionais:** Inclui seções sobre mim, formação acadêmica, experiência profissional, habilidades técnicas, idiomas e contato.
+* **Internacionalização (i18n):** Switch de idioma funcional entre Português e Inglês com traduções completas.
+* **Timeline de Experiências:** Layout em cards verticais otimizado para mobile com informações detalhadas.
+* **Habilidades Categorizadas:** Skills organizadas por Cloud & DevOps, Linguagens, Frameworks, Bancos de Dados, Ferramentas e Segurança.
+* **Animações Suaves:** Efeitos de hover e transições para melhor experiência do usuário.
 
 ## 🛠️ Tecnologias Utilizadas
 
-* **Angular:** Framework principal para a construção da interface.
-* **TypeScript:** Linguagem base para o desenvolvimento com Angular.
-* **Angular Material:** Biblioteca de componentes para um design limpo e moderno.
-* **angular-cli-ghpages:** Ferramenta para automatizar o deploy para o GitHub Pages.
-* **HTML5 & SCSS:** Estrutura e estilização do site.
+* **Angular 19:** Framework principal com standalone components e arquitetura moderna.
+* **TypeScript:** Linguagem base com tipagem estática para maior robustez.
+* **Angular Material:** Biblioteca de componentes UI para design consistente.
+* **RxJS:** Gerenciamento de estado reativo para o sistema de tradução.
+* **CSS3:** Estilização avançada com flexbox, grid e animações.
+* **angular-cli-ghpages:** Deploy automatizado para GitHub Pages.
 
 ## 🚀 Começando
 
@@ -71,38 +74,30 @@ Este projeto utiliza duas branches com propósitos distintos. Entender essa sepa
 
 3.  **Publique a Nova Versão**: Para atualizar o site online, use os comandos abaixo. Eles irão compilar o projeto e enviar o resultado para a branch `gh-pages` automaticamente.
 
-    * **Para publicar a versão em Português (padrão):**
+    * **Para publicar:**
         ```bash
-        # 1. Compila o projeto para produção
-        ng build --configuration production --base-href "/"
-        
-        # 2. Envia o conteúdo da pasta de 'dist' para a branch gh-pages
-        # (Lembre-se de confirmar o nome da pasta de saída com 'ls dist/')
-        ngh --dir=dist/leomarotta.github.io/browser
-        ```
-
-    * **Para publicar a versão em Inglês:**
-        ```bash
-        # 1. Compila o projeto usando a configuração 'en'
-        ng build --configuration=en
-        
-        # 2. Envia para uma subpasta no mesmo branch
-        ngh --dir=dist/leomarotta.github.io/en --no-silent
+        # Deploy da versão principal (português)
+        npm run deploy
         ```
 
 ## 📜 Scripts Disponíveis
 
-No arquivo `package.json`, você pode encontrar (ou criar) scripts para facilitar as tarefas comuns:
+* `npm start`: Servidor de desenvolvimento em `http://localhost:4200/`
+* `npm run build`: Build de produção
+* `npm run deploy`: Build e deploy para GitHub Pages
+* `npm test`: Executa testes unitários
 
-* `npm start`: Roda o servidor de desenvolvimento em `http://localhost:4200/`.
-* `npm run build`: Compila o projeto para produção.
-* `npm test`: Executa os testes unitários com o Karma.
+## 🌐 Funcionalidades de Idioma
 
-*(Dica: Você pode criar atalhos para os comandos de deploy no seu `package.json` para facilitar ainda mais!)*
+O site possui sistema de tradução completo:
+* Switch de idioma no canto superior direito
+* Tradução dinâmica de todos os textos
+* Suporte para Português (padrão) e Inglês
+* Estado de idioma mantido durante a navegação
 
 ## 📫 Contato
 
 * **Leonardo Marotta**
 * **LinkedIn:** [linkedin.com/in/leonardo-marotta](https://linkedin.com/in/leonardo-marotta)
 * **GitHub:** [github.com/LeoMarotta](https://github.com/LeoMarotta)
-* **Email:** [lgmarotta@inf.ufpel.edu.br](mailto:lgmarotta@inf.ufpel.edu.br)
+* **Email:** [leogmarotta@gmail.com](mailto:leogmarotta@gmail.com)

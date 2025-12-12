@@ -1,13 +1,18 @@
 <div id="research-experience" class="experience-wrapper">
-  <div class="timeline">
-    <div
-      class="timeline-item"
-      *ngFor="let item of researchExperiences; let i = index"
-      [ngClass]="{'timeline-item-even': isEven(i)}"
-    >
-      <div class="timeline-content">
-        <h3 class="job-title">{{ item.title }}</h3>
-        <p class="company-name">{{ item.company }}</p>
+  <div class="experience-grid">
+    <div class="experience-card" *ngFor="let item of researchExperiences">
+      <div class="experience-header">
+        <div class="experience-icon">
+          <mat-icon>{{ item.icon }}</mat-icon>
+        </div>
+        <div class="experience-info">
+          <h3>{{ item.title }}</h3>
+          <p class="company-name">{{ item.company }}</p>
+          <p class="period">{{ item.period }}</p>
+        </div>
+      </div>
+      
+      <div class="experience-content">
         <ul>
           <li *ngFor="let description of item.description">
             {{ description }}
@@ -16,12 +21,6 @@
         <div class="tech-tags">
           <span *ngFor="let tag of item.techTags">#{{ tag }}</span>
         </div>
-      </div>
-      <div class="timeline-dot">
-        <mat-icon>{{ item.icon }}</mat-icon>
-      </div>
-      <div class="timeline-date">
-        {{ item.period }}
       </div>
     </div>
   </div>

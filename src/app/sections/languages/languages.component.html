@@ -1,0 +1,10 @@
+<div id="languages" class="languages-container">
+  <h2>{{ languageService.translate('languages.title') }}</h2>
+  <div class="languages-grid">
+    <div class="language-card" *ngFor="let lang of languages">
+      <div class="language-flag">{{ lang.flag }}</div>
+      <h3>{{ languageService.translate(lang.nameKey) }}</h3>
+      <p>{{ languageService.translate(lang.levelKey) }}</p>
+    </div>
+  </div>
+</div>
